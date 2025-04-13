@@ -21,6 +21,7 @@ class ItemModelAdapter extends TypeAdapter<ItemModel> {
       price: fields[1] as String,
       date: fields[2] as String,
       provider: fields[3] as String,
+      category: fields[4] as String,  
     );
   }
 
@@ -35,7 +36,10 @@ class ItemModelAdapter extends TypeAdapter<ItemModel> {
       ..writeByte(2)
       ..write(obj.date)
       ..writeByte(3)
-      ..write(obj.provider);
+      ..write(obj.provider)
+      ..writeByte(4)
+      ..write(obj.category);
+      
   }
 
   @override

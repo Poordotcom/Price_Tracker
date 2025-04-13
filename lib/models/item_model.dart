@@ -47,8 +47,12 @@ class ItemModel {
 
   @HiveField(3)
   String provider;
+  // @HiveField(4)
+  // String category;
+  @HiveField(4)
+  String category;
 
-  ItemModel({required this.name, required this.price, required this.date, required this.provider});
+  ItemModel({required this.name, required this.price, required this.date, required this.provider,required this.category,});
 }
 
 
